@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("J01QMSmqj93QY8gmJ");
+        })();
+    </script>
+    <title> original-Document</title>
+
+
+</head>
+<style>
+    .screen {
+        position: relative;
+        background: #3e3e3e;
+        border-radius: 15px;
+    }
+
+    p {
+        color: white;
+    }
+
+    .screen:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+        z-index: -1;
+    }
+
+    .screen-header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: #4d4d4f;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .screen-header-left {
+        margin-right: auto;
+    }
+
+    .screen-header-button {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 3px;
+        border-radius: 8px;
+        background: white;
+    }
+
+    .screen-header-button.close {
+        background: orangered;
+    }
+
+    .screen-header-button.maximize {
+        background: #e8e925;
+    }
+
+    .screen-header-button.minimize {
+        background: #74c54f;
+    }
+
+    .screen-header-right {
+        display: flex;
+    }
+
+    .screen-header-ellipsis {
+        width: 3px;
+        height: 3px;
+        margin-left: 2px;
+        border-radius: 8px;
+        background: #999;
+    }
+
+    .screen-body {
+        display: flex;
+    }
+
+    .screen-body-item {
+        flex: 1;
+        padding: 50px;
+    }
+
+    .screen-body-item.left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app-title {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        color: orangered;
+        font-size: 26px;
+    }
+
+    .app-title:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 25px;
+        height: 4px;
+        background: orangered;
+    }
+
+    .app-contact {
+        margin-top: auto;
+        font-size: 8px;
+        color: #888;
+    }
+
+    .app-form-group {
+        margin-bottom: 15px;
+    }
+
+    .app-form-group.message {
+        margin-top: 40px;
+    }
+
+    .app-form-group.buttons {
+        margin-bottom: 0;
+        text-align: right;
+    }
+
+    .app-form-control {
+        width: 100%;
+        padding: 10px 0;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #666;
+        color: white;
+        font-size: 14px;
+
+        outline: none;
+        transition: border-color .2s;
+    }
+
+    .app-form-control::placeholder {
+        color: #666;
+    }
+
+    .app-form-control:focus {
+        border-bottom-color: #ddd;
+    }
+
+    .app-form-button {
+        background: none;
+        border: none;
+        color: orangered;
+        font-size: 14px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .app-form-button:hover {
+        color: white;
+    }
+
+    .credits {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        color: orangered;
+        font-family: 'montseratt', sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .credits-link {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+
+    .screen and .screen-body {
+        flex-direction: column;
+    }
+
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title span {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+
+    }
+
+
+    .screen-body {
+        padding: 40px;
+
+    }
+
+    .screen-body-item {
+        padding: 0;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('aUiOG_1BKpGj38Itb')
+    </script>
+    <div class="background" id="bckgrd">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div id="error_message">
+
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>CONTACT</span>
+                                <span>US </span>
+                            </div>
+                            <div class="app-contact">CONTACT INFO :talk@itag-labs.com</a></div>
+                        </div>
+                        <div class="screen-body-item">
+                            <div class="app-form">
+
+                                <div class="app-form-group">
+                                    <input id="name" class="app-form-control" placeholder="NAME" required
+                                        onkeyup="validateName()">
+                                    <p id="namep"></p>
+                                </div>
+                                <div class="app-form-group">
+                                    <input id="mail" class="app-form-control" placeholder="EMAIL" required
+                                        onkeyup="validateemail()">
+                                    <p id="mailp"></p>
+                                </div>
+                                <div class="app-form-group">
+                                    <input id="phone" class="app-form-control" placeholder="CONTACT NO" required
+                                        onkeyup="validatemobile()">
+                                    <p id="mobilep"></p>
+                                </div>
+                                <div class="app-form-group message">
+                                    <input id="message" class="app-form-control" placeholder="MESSAGE" required
+                                        onkeyup="validatemessage()">
+                                    <p id="messagep"></p>
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button">CANCEL</button>
+                                    <button class="app-form-button" onclick="sendEmail()"> submit</button>
+                                    <small id="submiterror" class="text-warning"></small>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+<script>
+
+
+
+    function validateName() {
+        var name = document.getElementById("name").value;
+
+        if (name.length == 0) {
+            namep.innerHTML = "*Name is required";
+            return false;
+        }
+
+        if (name.length < 5) {
+            namep.innerHTML = "*Enter vaild name";
+            return false;
+        }
+
+        namep.innerHTML = "<p>valid</p>";
+        return true;
+    }
+    function validateemail() {
+        var mail = document.getElementById("mail").value;
+
+        if (mail.length == 0) {
+            mailp.innerHTML = "*Email is required";
+            return false;
+        }
+
+        if (!mail.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+            mailp.innerHTML = "*Email invalid";
+            return false;
+        }
+        mailp.innerHTML = "<p>valid</p>";
+        return true;
+    }
+    function validatemobile() {
+        var phone = document.getElementById("phone").value;
+
+        if (phone.length == 0) {
+            mobilep.innerHTML = "*Mobile no is required";
+            return false;
+        }
+
+        if (phone.length !== 10) {
+            mobilep.innerHTML = "Enter vaild Phone number";
+            return false;
+        }
+
+        if (!phone.match(/^[0-9]{10}$/)) {
+            mobilep.innerHTML = "*Only digits please";
+            return false;
+        }
+
+        mobilep.innerHTML = "<p>valid</p>";
+        return true;
+    }
+    function validatemessage() {
+        var message = document.getElementById("message").value;
+        var required = 10;
+        var left = required - message.length;
+
+        if (left > 0) {
+            messagep.innerHTML = left + "More characters required";
+            return false;
+        }
+        messagep.innerHTML = "<p>valid</p>";
+        return true;
+    }
+    function sendEmail() {
+        if (
+            !validateName() ||
+            !validateemail() ||
+            !validatemobile() ||
+            !validatemessage()
+        ) {
+            submitp.style.display = "block";
+            submitp.innerHTML = "*Please enter Valid  to submit the form.";
+            setTimeout(function () {
+                submitp.style.display = "none";
+            }, 5000);
+            return false;
+        } else {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("mail").value;
+            var message = document.getElementById("message").value;
+            var phone = document.getElementById("phone").value;
+            // var body =
+            //     "Name : " +
+            //     name +
+            //     "<br> Mobile Number :" +
+            //     mobile +
+            //     "<br> Email ID :" +
+            //     email +
+            //     "<br> Message :" +
+            //     message;
+
+            // function validate() {
+            //     var name = document.getElementById("name").value;
+            //     var name = document.getElementById("contact-name").value;
+            //     if (name.length < 5) {
+            //         alert("name error")
+            //     }
+            //     var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            //     var email = document.getElementById("mail").value;
+            //     if (!email.match(regex)) {
+            //         alert("Invalid email");
+            //     }
+            //     var contact = document.getElementById("phone").value;
+            //     var contactRegex = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+            //     if (!contact.match(contactRegex)) {
+            //         alert("Contact error");
+            //     }
+            //     var message = document.getElementById("message").value;
+            //     if (message.length < 15) {
+            //         alert("mesage error");
+
+            //     }
+
+            // var body = `name:${name};  mail:${email} contact:${contact} message:${message}`
+            //     alert(finalMsg);
+
+
+            const btn = document.getElementById('button');
+
+
+            const serviceID = "service_6d2m6lc";
+            const templateID2 = "template_7ar9kdd";
+            const templateID1 = "template_6lsr7rk";
+
+            var templateParams1 = {
+                name: name,
+                mail: email,
+                message: message,
+                number: phone
+            };
+            var templateParams2 = {
+                name: name,
+                mail: email,
+                message: message
+            };
+            emailjs
+                .send(serviceID, templateID1, templateParams1)
+                .then((res) => {
+                    emailjs.send(serviceID, templateID2, templateParams2)
+                        .then((res) => {
+
+                            alert("Your message sent successfully!!");
+                        })
+                        .catch((err) => console.log(err));
+
+                })
+                .catch((err) => console.log(err));
+
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
